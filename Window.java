@@ -109,8 +109,6 @@ public class Window {
 				    }
 				    tree.setModel(model);
 				}
-
-				//tree.setModel(model);	
 			}
 		});
 		btnAddUser.setBounds(840, 29, 85, 22);
