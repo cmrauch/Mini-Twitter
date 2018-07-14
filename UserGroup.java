@@ -10,21 +10,16 @@ public class UserGroup extends AbstractUsers{
 	public ArrayList abstractUsers = new ArrayList();
 	
 	public UserGroup(String ID){
-		this.ID = ID;
-		
+		this.ID = ID;	
 	}
+	
     // finds the ID of the calling object's children
-	// ************ need to modify to also check children's children*********************************
 	public AbstractUsers find(String ID) {	
 			for(int x=0;x<abstractUsers.size();++x) {
-			    if(ID.equals(this.abstractUsers.get(x).toString())) {
-				    //guy = (AbstractUsers) ( this.abstractUsers.get(x));
-				    System.out.println("find....returned object");
-				     return (AbstractUsers) this.abstractUsers.get(x);
+			    if(ID.equals(this.abstractUsers.get(x).toString()))
+			        return (AbstractUsers) this.abstractUsers.get(x);
 			    }
 			}
-
-		System.out.println("find....returned null");
 		return null;
 	}
 	
@@ -40,7 +35,7 @@ public class UserGroup extends AbstractUsers{
 	}
 	
 	public String toString(){
-        return this.ID;
+            return this.ID;
    }
 	
 
