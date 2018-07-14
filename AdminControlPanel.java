@@ -23,9 +23,7 @@ public class AdminControlPanel {
 			return false;
 		}
 		else {
-		    // adds ads newUSer as a child of selectedUserNode
 		    selectedUserNode.abstractUsers.add(newUser);
-		    //selectedUserNode.addUsers(selectedUserNode, newUser)
 		    return true;
 		}
 	}
