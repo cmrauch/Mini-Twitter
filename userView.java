@@ -61,14 +61,11 @@ public class userView extends JFrame {
 		list_1.setToolTipText("Followers");
 		list_1.setBounds(65, 106, 288, 154);
 		contentPane.add(list_1);
-		JScrollPane listScroller = new JScrollPane(list_1);
-		//listScroller_1.setVisible(true);
+		
 		
 		JList list_2 = new JList();
 		list_2.setBounds(90, 365, 331, 114);
 		contentPane.add(list_2);
-		JScrollPane listScroller_1 = new JScrollPane(list_2);
-		listScroller_1.setVisible(true);
 		
 		JButton btnNewButton_2 = new JButton("Follow User\r\n");
 		btnNewButton_2.addActionListener(new ActionListener() {

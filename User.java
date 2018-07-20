@@ -3,7 +3,8 @@ public class User extends AbstractUsers {
 
 	public User(String userName) {
 		this.ID = userName ;
-		//followers.add(this); //add yourself as your own follower
+		hasChildren  = false;
+		creationTime = System.currentTimeMillis();
 	}
 
 	@Override

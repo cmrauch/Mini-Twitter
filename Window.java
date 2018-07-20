@@ -109,6 +109,8 @@ public class Window {
 				    }
 				    tree.setModel(model);
 				}
+
+				//tree.setModel(model);	
 			}
 		});
 		btnAddUser.setBounds(840, 29, 85, 22);
@@ -209,8 +211,27 @@ public class Window {
 		lblMiniTwitter.setBounds(524, 242, 339, 40);
 		frame.getContentPane().add(lblMiniTwitter);
 		
+		JButton btnVerify = new JButton("Verify");
+		btnVerify.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Visitor v = new verifyVisitor();
+				User.acceptVisitor(v);
+			}
+		});
+		btnVerify.setBounds(778, 211, 147, 58);
+		frame.getContentPane().add(btnVerify);
+		
+		JButton btnNewButton_4 = new JButton("Find Last Update");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Visitor v = new lastUpdateVisitor();
+				User.acceptVisitor(v);
+			}
+		});
+		btnNewButton_4.setBounds(812, 310, 85, 21);
+		frame.getContentPane().add(btnNewButton_4);
+		
 		//tree.setModel(model);	
 	
 	}
-
 }
