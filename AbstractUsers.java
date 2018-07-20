@@ -37,7 +37,8 @@ public abstract class AbstractUsers {
     }
 	
 	public void display() {
-		System.out.println(this.ID);
+		System.out.println(this.ID + "\nCreated at t = " + creationTime);
+		System.out.println("Last Tweet at t = " + lastUpdateTime);
 	}
 	
 	public void addTweet(AbstractUsers root, String tweet) {
@@ -47,6 +48,8 @@ public abstract class AbstractUsers {
 		for(int x=0; x<followers.size();++x) {
 			//add to a ledger of their entire news feed
 			((AbstractUsers) followers.get(x)).newsFeed.add(tweet);
+			
+			lastUpdateTime = System.currentTimeMillis();
 		}
 	}
 	
@@ -68,6 +71,13 @@ public abstract class AbstractUsers {
 		return newsFeed;
 	}
 	
+	public boolean hasChildren() {
+		return this.hasChildren;
+	}
+	
+	protected long lastUpdateTime;
+	protected long creationTime;
+	protected boolean hasChildren;
 	protected String ID;
 	protected ArrayList following = new ArrayList();
 	protected ArrayList followers = new ArrayList();
